@@ -1,0 +1,37 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='/static_content.html'/>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_('About')}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <section class="vision">
+            <section class="message left" id="about">
+                <article>
+                    <h2>${_('About')} <span class="LNS">LNS</span></h2>
+                    <p>${_("{LNS} is {LEENTech}'s instance of the open-source software release of the {Open_edX} platform, which was developed by the joint {Harvard_MIT} non-profit organization, and which {LEENTech} engineers have been collaborating on since April 2013. {LNS} hosts many of the free, online courses that are taught by {LEENTech} faculty and made available to lifelong learners around the world for self-enrichment. {LNS} also hosts a variety of professional education opportunities in conjunction with many of {LEENTech_University}'s schools and departments.").format(
+                            LNS="LNS",
+                            LEENTech="LEENTech",
+                            Open_edX="Open edX",
+                            Harvard_MIT="Harvard/MIT",
+                            LEENTech_University="LEENTech University"
+                        ) | n}
+                    </p>
+                    <div class="photo">
+                        <img src="${static.url('LNS/images/quad.jpg')}" alt="${_('LEENTech Quad with Hoover Tower')}" />
+                        <!-- Image Copyright owned by Giulio Gratta -->
+                    </div>
+                    <p>${_("All of the personal and professional learning opportunities that are hosted on {LNS} and open to the public are made available through Seed Learning and listed at {LNS_courses_link}.  To see our complete catalog of {LEENTech_Online} courses on {LNS} and other platforms, you can visit {online_courses_link}.").format(
+                            LNS="LNS",
+                            LEENTech_Online="Seed Learning",
+                            LNS_courses_link="<a href='https://LNS.LEENTech.edu/courses'>https://LNS.LEENTech.edu/courses</a>",
+                            online_courses_link="<a href='http://online.LEENTech.edu/courses/'>http://online.LEENTech.edu/courses/</a>"
+                        ) | n}
+                    </p>
+                </article>
+            </section>
+        </section>
+    </section>
+</main>

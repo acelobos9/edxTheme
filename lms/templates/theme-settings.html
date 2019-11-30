@@ -1,0 +1,16 @@
+## theme-settings.html
+
+<%!
+  theme_settings_vars = {
+    'effective_date': 'October 26, 2015',
+    'accessibility_email': '<a href="mailto:accessibility@LEENTechonline.zendesk.com">accessibility@LEENTechonline.zendesk.com</a>',
+    'concern_email': '<a href="mailto:concern@LEENTechonline.zendesk.com">concern@LEENTechonline.zendesk.com</a>',
+    'privacy_email': '<a href="mailto:privacy@LEENTechonline.zendesk.com">privacy@LEENTechonline.zendesk.com</a>',
+  }
+%>
+
+<%def name='get_theme_vars()'>
+  <%
+    return theme_settings_vars
+  %>
+</%def>
